@@ -69,10 +69,20 @@ const Login = () => {
       style={tw`flex-1`}
       source={{ uri: "https://tinder.com/static/tinder.png"}}
       >
-          <TextInput value={email} style={styles.input} placeholder='Email'  onChangeText={(text) => setEmail(text)} ></TextInput>
-        <TouchableOpacity  onPress={signIn} style={[tw`absolute bottom-40 w-52 bg-white p-4 rounded-2xl`, {marginHorizontal: "25%"}]}>
+        <View style={[tw`absolute bottom-40  bg-white p-4 rounded-2xl`, {marginHorizontal: "25%"}]}>
+        <TextInput value={email} style={tw`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500
+         focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+          dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder='Email'  onChangeText={(text) => setEmail(text)} ></TextInput>
+       <TextInput secureTextEntry={true} value={password} style={tw`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500
+         focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+          dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder='Password'
+          onChangeText={(text) => setPassword(text)}></TextInput>
+       
+        <TouchableOpacity  onPress={signIn} >
           <Text style={tw`font-semibold text-center`} > Sign in & Get Swiping</Text>
         </TouchableOpacity>
+        </View>
+      
       </ImageBackground>
 
     </View>
