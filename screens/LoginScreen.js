@@ -69,7 +69,7 @@ const Login = () => {
       style={tw`flex-1`}
       source={{ uri: "https://tinder.com/static/tinder.png"}}
       >
-          <TextInput value={email} style={[tw`absolute bottom-30 `, {marginHorizontal: "25%"}]} placeholder='Email'  onChangeText={(text) => setEmail(text)} ></TextInput>
+          <TextInput value={email} style={styles.input} placeholder='Email'  onChangeText={(text) => setEmail(text)} ></TextInput>
         <TouchableOpacity  onPress={signIn} style={[tw`absolute bottom-40 w-52 bg-white p-4 rounded-2xl`, {marginHorizontal: "25%"}]}>
           <Text style={tw`font-semibold text-center`} > Sign in & Get Swiping</Text>
         </TouchableOpacity>
